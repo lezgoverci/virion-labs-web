@@ -9,7 +9,7 @@ import homestyles from "./index.module.scss";
 const Home: NextPage = () => {
   return (
     <DefaultTemplate>
-      <div className={homestyles.home}>
+      <div className={[homestyles.home, 'text-white'].join(" ")}>
         <div className="uppercase text-6xl max-w-2xl text-center">
           <span className="text-orange-600">Together</span> in building the future of <span className="text-pink-500">Web3</span>
         </div>
