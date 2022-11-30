@@ -6,6 +6,47 @@ import { useState } from "react";
 
 export default function Header() {
   const [isOpenNavMobile, setIsOpenNavMobile] = useState(false);
+  const [navList, setNavList] = useState([
+    {
+      title: "Home",
+      link: "/",
+      active: true,
+    },
+    {
+      title: "Vision",
+      link: "/",
+      active: false,
+    },
+    {
+      title: "Ecosystem",
+      link: "/",
+      active: false,
+    },
+    {
+      title: "Why Virion",
+      link: "/",
+      active: false,
+    },
+    {
+      title: "Partners",
+      link: "/",
+      active: false,
+    },
+  ]);
+
+  const handleNavSelect = (navItem: {
+    title: string;
+    link: string;
+    active: boolean;
+  }) => {
+    navList.map((item) => {
+      if (item.title == navItem.title) {
+        item.active = true;
+      }else{
+        item.active = false;
+      }
+    });
+  };
 
   return (
     <div className="header flex flex-col">
@@ -24,30 +65,13 @@ export default function Header() {
           <span className="pl-3">Virion Labs</span>
         </div>
         <div className="hidden links flex flex-row list-none">
-          {[
-            {
-              title: "Home",
-              link: "/",
-            },
-            {
-              title: "Vision",
-              link: "/",
-            },
-            {
-              title: "Ecosystem",
-              link: "/",
-            },
-            {
-              title: "Why Virion",
-              link: "/",
-            },
-            {
-              title: "Partners",
-              link: "/",
-            },
-          ].map((item, index) => {
+          {navList.map((item, index) => {
             return (
-              <li key={index} className="mx-6">
+              <li
+                onClick={() => handleNavSelect(item)}
+                key={index}
+                className="mx-6"
+              >
                 <Link href={item.link}>{item.title}</Link>
               </li>
             );
@@ -60,35 +84,10 @@ export default function Header() {
 
       {isOpenNavMobile ? (
         <div className="links flex flex-col list-none pt-4 bg-slate-900 text-gray-600">
-          {[
-            {
-              title: "Home",
-              link: "/",
-              active: true,
-            },
-            {
-              title: "Vision",
-              link: "/",
-              active: false,
-            },
-            {
-              title: "Ecosystem",
-              link: "/",
-              active: false,
-            },
-            {
-              title: "Why Virion",
-              link: "/",
-              active: false,
-            },
-            {
-              title: "Partners",
-              link: "/",
-              active: false,
-            },
-          ].map((item, index) => {
+          {navList.map((item, index) => {
             return (
               <li
+                onClick={() => handleNavSelect(item)}
                 key={index}
                 className={`pl-4 mb-3 ${
                   item.active ? "text-white" : "text-gray-600"
