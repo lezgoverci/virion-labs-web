@@ -49,22 +49,22 @@ export default function Header() {
   };
 
   return (
-    <div className="header flex flex-col">
-      <div className="py-4 bg-black text-white flex-row flex items-center px-3">
+    <div className="header flex flex-col bg-black xl:justify-center xl:flex-1 ">
+      <div className="py-4  text-white flex-row  flex items-center align-center px-3  ">
         <div
           onClick={() => setIsOpenNavMobile(!isOpenNavMobile)}
-          className="btn-menu"
+          className="btn-menu md:hidden"
         >
           <Bars3Icon className="w-6 h-6 text-white" />
         </div>
-        <div className="flex-1">
+        <div className="flex-1 md:flex-none">
           <div className="hidden self-start">
             <Image src={"/logo.png"} width={"100"} height={"100"} />
           </div>
 
           <span className="pl-3">Virion Labs</span>
         </div>
-        <div className="hidden links flex flex-row list-none">
+        <div className="hidden links md:flex md:flex-1 justify-end lg:justify-center flex-row list-none">
           {navList.map((item, index) => {
             return (
               <li
@@ -83,7 +83,7 @@ export default function Header() {
       </div>
 
       {isOpenNavMobile ? (
-        <div className="links flex flex-col list-none pt-4 bg-slate-900 text-gray-600">
+        <div className="md:hidden links flex flex-col list-none pt-4 bg-slate-800 text-gray-600">
           {navList.map((item, index) => {
             return (
               <li
