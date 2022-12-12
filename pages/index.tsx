@@ -43,7 +43,7 @@ const Home: NextPage = () => {
                 to an end, advancements in technology can soon takeover the
                 realm we people used to dominate. But human ingenuity and
                 imagination can never be out performed by the sheer complexity
-                of today's technology. Through the power of making strong and
+                of today&apos;s technology. Through the power of making strong and
                 genuine connections, we will be able to surpass the limitations
                 of our modern day solutions. Afterall, without us, advancements
                 would have never existed.
