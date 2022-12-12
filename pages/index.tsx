@@ -119,7 +119,7 @@ const Home: NextPage = () => {
               <div className="bg-slate-300 p-6 rounded-3xl mt-4">
                 <div className="text-4xl pb-4 text-pink-700">Reimagine</div>
                 <div>
-                  With our core team's combined experience in project
+                  With our core team&apos;s combined experience in project
                   management, marketing, community development and tech, we will
                   be able to facilitate the ideation phase for your WEB 3
                   project in a fast paced and cost efficient manner.
