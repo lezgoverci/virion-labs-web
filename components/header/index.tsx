@@ -65,7 +65,7 @@ export default function Header() {
               <Image src={"/logo.png"} width={"100"} height={"100"} />
             </div>
 
-            <span className="pl-3">Virion Labs</span>
+            <a href="/" className="pl-3">Virion Labs</a>
           </div>
           <div className="hidden links md:flex md:flex-1 justify-end lg:justify-center flex-row list-none">
             {navList.map((item, index) => {
@@ -81,7 +81,10 @@ export default function Header() {
             })}
           </div>
           <div className="float-right">
-            <RoundedButton text="Connect" />
+
+            <RoundedButton text="Connect"  link="/sign-up"/>
+
+
           </div>
         </div>
 
