@@ -9,27 +9,27 @@ export default function Header() {
   const [navList, setNavList] = useState([
     {
       title: "Home",
-      link: "#home",
+      link: "/#home",
       active: true,
     },
     {
       title: "Vision",
-      link: "#vision",
+      link: "/#vision",
       active: false,
     },
     {
       title: "Ecosystem",
-      link: "#ecosystem",
+      link: "/#ecosystem",
       active: false,
     },
     {
       title: "Why Virion",
-      link: "#why",
+      link: "/#why",
       active: false,
     },
     {
       title: "Partners",
-      link: "#partners",
+      link: "/#partners",
       active: false,
     },
   ]);
