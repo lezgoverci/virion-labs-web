@@ -65,7 +65,7 @@ export default function Header() {
               <Image src={"/logo.png"} width={"100"} height={"100"} />
             </div>
 
-            <a href="/" className="pl-3">Virion Labs</a>
+            <Link href="/" className="pl-3">Virion Labs</Link>
           </div>
           <div className="hidden links md:flex md:flex-1 justify-end lg:justify-center flex-row list-none">
             {navList.map((item, index) => {
