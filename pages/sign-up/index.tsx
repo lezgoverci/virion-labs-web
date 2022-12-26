@@ -4,6 +4,7 @@ import useSWR from "swr";
 import { SyntheticEvent, useEffect, useState } from "react";
 
 import { fetcher } from "../../lib/api.js";
+import { useRouter } from "next/router";
 
 type User = {
   username: string;
@@ -24,6 +25,7 @@ const INITIAL_DATA: User = {
 export default function UpdatesPage() {
   const [userInput, setUserInput] = useState<User>(INITIAL_DATA);
   const [errorMsg, setErrorMessage] = useState("");
+  const router = useRouter();
 
   const handleInput = (e) => {
     setUserInput((prev) => {
@@ -42,13 +44,33 @@ export default function UpdatesPage() {
     const data = JSON.stringify({ ...userInput });
 
     if (errorMsg === "") {
-      fetcher(`${process.env.NEXT_PUBLIC_API_URI}/users`, {
+      fetcher(`${process.env.NEXT_PUBLIC_API_URI}/auth/local/register`, {
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify(userInput),
         method: "POST",
-      });
+      }).then(res => {
+        localStorage.setItem('io.virionlabs.jwt',res.jwt)
+        fetcher(`${process.env.NEXT_PUBLIC_API_URI}/accounts`,{
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            data: {
+              "users_permissions_user": res.id
+            }
+          }),
+          method: "POST",
+        }).then(res =>{
+          console.log(res)
+          router.push("/profile")
+        })
+        .catch(err => {
+          console.log(err)
+        })
+      })
+      .catch(err => console.log(err))
     }
   };
 
