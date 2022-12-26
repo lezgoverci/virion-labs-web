@@ -5,6 +5,7 @@ import { SyntheticEvent, useEffect, useState } from "react";
 
 import { fetcher } from "../../lib/api.js";
 import { useRouter } from "next/router";
+import { NextRequest } from "next/server";
 
 type User = {
   username: string;
@@ -22,7 +23,7 @@ const INITIAL_DATA: User = {
   type: "",
 };
 
-export default function UpdatesPage() {
+export default function SignUpPage() {
   const [userInput, setUserInput] = useState<User>(INITIAL_DATA);
   const [errorMsg, setErrorMessage] = useState("");
   const router = useRouter();
@@ -64,7 +65,7 @@ export default function UpdatesPage() {
           method: "POST",
         }).then(res =>{
           console.log(res)
-          router.push("/profile")
+          //router.push("/profile")
         })
         .catch(err => {
           console.log(err)
