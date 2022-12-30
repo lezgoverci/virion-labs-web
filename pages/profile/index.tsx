@@ -10,6 +10,7 @@ export default function ProfilePage({jwt}) {
 
   const handleLogout = () =>{
     localStorage.removeItem("io.virionlabs.jwt");
+    localStorage.removeItem("io.virionlabs.user");
     setToken(null)
   }
 

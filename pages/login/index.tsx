@@ -33,7 +33,7 @@ export default function LoginPage() {
     const data = JSON.stringify({ ...userInput });
 
     if (errorMsg === "") {
-      fetcher(`${process.env.NEXT_PUBLIC_API_URI}/auth/local/register`, {
+      fetcher(`${process.env.NEXT_PUBLIC_API_URI}/auth/local/`, {
         headers: {
           "Content-Type": "application/json",
         },
@@ -42,24 +42,9 @@ export default function LoginPage() {
       })
         .then((res) => {
           localStorage.setItem("io.virionlabs.jwt", res.jwt);
-          fetcher(`${process.env.NEXT_PUBLIC_API_URI}/accounts`, {
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify({
-              data: {
-                users_permissions_user: res.id,
-              },
-            }),
-            method: "POST",
-          })
-            .then((res) => {
-              console.log(res);
-              //router.push("/profile")
-            })
-            .catch((err) => {
-              console.log(err);
-            });
+          localStorage.setItem("io.virionlabs.user", JSON.stringify(res.user));
+
+          router.push("/profile")
         })
         .catch((err) => console.log(err));
     }
@@ -117,14 +102,15 @@ export default function LoginPage() {
             <div className="text-3xl py-4">Log into Virion Labs</div>
 
             <div className="my-4 flex flex-col">
-              <label className="mb-2" htmlFor="username">
+              <label className="mb-2" htmlFor="identifier">
                 Username or email
               </label>
               <input
+                value={userInput.identifier}
                 className="px-3 py-2 rounded text-black"
                 type="text"
-                name="username"
-                id="username"
+                name="identifier"
+                id="identifier"
                 onChange={(e) => handleInput(e)}
               />
             </div>
@@ -134,6 +120,7 @@ export default function LoginPage() {
                 Password
               </label>
               <input
+                value={userInput.password}
                 className="px-3 py-2 rounded text-black"
                 type="password"
                 name="password"
