@@ -109,9 +109,10 @@ export default function Header() {
                   <a
                     id="connectbtn"
                     className="btn btn-primary-alta btn-small"
-                    href="/login"
+
                   >
-                    Wallet connect
+                    <Link href={"/login"}>Wallet connect</Link>
+
                   </a>
                 </div>
               </div>
