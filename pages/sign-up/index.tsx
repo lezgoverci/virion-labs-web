@@ -1,7 +1,7 @@
 import { TestComponent } from "../../components/test-component";
 import DefaultTemplate from "../../templates/default";
 import useSWR from "swr";
-import { SyntheticEvent, useEffect, useState } from "react";
+import { ChangeEvent, SyntheticEvent, useEffect, useState } from "react";
 
 import { fetcher } from "../../lib/api.js";
 import { useRouter } from "next/router";
@@ -28,7 +28,7 @@ export default function SignUpPage() {
   const [errorMsg, setErrorMessage] = useState("");
   const router = useRouter();
 
-  const handleInput = (e) => {
+  const handleInput = (e: ChangeEvent<HTMLInputElement> | ChangeEvent<HTMLSelectElement>) => {
     setUserInput((prev) => {
       if (e.target.name === "retype-password") {
         if (e.target.value !== userInput.password) {
