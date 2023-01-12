@@ -20,7 +20,7 @@ export default function Header() {
     },
     {
       title: "Roadmap",
-      link: "/projects",
+      link: "/roadmap",
       active: false,
       icon: "feather-map"
     },
