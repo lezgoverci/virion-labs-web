@@ -49,9 +49,9 @@ export default function Header() {
               <div className="mainmenu-wrapper">
                 <nav id="sideNav" className="mainmenu-nav d-none d-xl-block">
                   <ul className="mainmenu">
-                    {navList.map((li) => {
+                    {navList.map((li,index) => {
                       return (
-                        <li>
+                        <li key={index}>
 
                           <a href={`${li.link}`}>
                           <i className={`${li.icon} mr--5`}></i>

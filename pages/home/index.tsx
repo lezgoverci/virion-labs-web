@@ -21,7 +21,7 @@ const Home: NextPage = () => {
                             complete customisation, and tons of integrations
                         </p>
                         <div className="input-group">
-                            <input type="text" className="form-control" placeholder="Your username" aria-label="Recipient's username"/>
+                            <input type="text" className="form-control" placeholder="Your username" aria-label="Recipient&apos;s username"/>
                             <div className="input-group-append">
                                 <button className="btn btn-primary btn-outline-secondary" type="button">Subscribe <i
                                         data-feather="chevrons-right"></i></button>
@@ -43,7 +43,7 @@ const Home: NextPage = () => {
                                 </div>
                             </div>
                             <p className="disc">Million of people are sell there NFTs in Virion Labsmarketplaces. Create & Sell
-                                Your NFT's.</p>
+                                Your NFT&apos;s.</p>
                         </div>
                     </div>
                 </div>
@@ -267,19 +267,19 @@ const Home: NextPage = () => {
                                 <a className="logo-dark" href="index.html"><img src="assets/images/logo/logo-dark.png" alt="nft-logo"/></a>
                             </div>
                             <p className="rn-footer-describe">
-                                Created with the collaboration of over 60 of the world's best Virion LabsArtists.
+                                Created with the collaboration of over 60 of the world&apos;s best Virion LabsArtists.
                             </p>
                         </div>
                         <div className="widget-bottom mt--40 pt--40">
                             <h6 className="title">Get The Latest Virion LabsUpdates </h6>
                             <div className="input-group">
-                                <input type="text" className="form-control bg-color--2" placeholder="Your username" aria-label="Recipient's username"/>
+                                <input type="text" className="form-control bg-color--2" placeholder="Your username" aria-label="Recipient&apos;s username"/>
                                 <div className="input-group-append">
                                     <button className="btn btn-primary-alta btn-outline-secondary" type="button">Subscribe</button>
                                 </div>
                             </div>
                             <div className="newsletter-dsc">
-                                <p>Email is safe. We don't spam.</p>
+                                <p>Email is safe. We don&apos;t spam.</p>
                             </div>
                         </div>
                     </div>
