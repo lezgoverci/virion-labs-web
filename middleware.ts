@@ -11,20 +11,20 @@ export function middleware(request: NextRequest) {
   const response = NextResponse.next();
 
 
-  if(url.includes('/login')){
-    response.cookies.set('io.virionlabs.jwt',"123456")
-  }else{
-    //console.log("not login")
-  }
+  // if(url.includes('/login')){
+  //   response.cookies.set('io.virionlabs.jwt',"123456")
+  // }else{
+  //   //console.log("not login")
+  // }
 
 
 
 
-  if(!cookie){
-    return NextResponse.rewrite(new URL('/login', request.url))
-  }else{
-    return NextResponse.rewrite(new URL('/profile', request.url))
-  }
+  // if(!cookie){
+  //   return NextResponse.rewrite(new URL('/home', request.url))
+  // }else{
+  //   return NextResponse.rewrite(new URL('/profile', request.url))
+  // }
 
   // const response = NextResponse.next();
   // console.log("cookie",cookie)

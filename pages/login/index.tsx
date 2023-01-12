@@ -132,7 +132,7 @@ export default function LoginPage() {
             <button
               onClick={(e) => {
                 e.preventDefault();
-                handleSubmit();
+                //handleSubmit();
               }}
               type="submit"
               className="rounded-full bg-pink-700 px-2 py-1 text-center text-xl py-3 "

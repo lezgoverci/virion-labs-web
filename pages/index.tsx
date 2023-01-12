@@ -4,13 +4,11 @@ import { useEffect } from "react";
 
 const Home: NextPage = () => {
   useEffect(() => {
-    const jwt = localStorage.getItem("io.virionlabs.jwt");
+    //const jwt = localStorage.getItem("io.virionlabs.jwt");
 
-    if (jwt) {
-      router.push("/profile");
-    }else{
-      router.push("/home")
-    }
+      router.replace("/home")
+
+
   }, []);
 
   return <></>

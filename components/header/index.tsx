@@ -109,7 +109,7 @@ export default function Header() {
                   <a
                     id="connectbtn"
                     className="btn btn-primary-alta btn-small"
-                    href="connect.html"
+                    href="/login"
                   >
                     Wallet connect
                   </a>
