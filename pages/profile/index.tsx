@@ -2,7 +2,7 @@ import AuthenticatedTemplate from "../../templates/authenticated";
 import { GetStaticProps } from "next";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
-export default function ProfilePage(props) {
+export default function ProfilePage(props: { jwt: any; }) {
 
   const router = useRouter();
   const [token, setToken] = useState(props.jwt);
@@ -77,7 +77,7 @@ export default function ProfilePage(props) {
 //   }}
 // }
 
-export async function getStaticProps(context){
+export async function getStaticProps(){
  // const userData = localStorage.getItem('io.virionlabs.user');
   return{ props: {user: null, jwt: null}}
 }
