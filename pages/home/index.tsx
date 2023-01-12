@@ -6,182 +6,393 @@ import DefaultTemplate from "../../templates/default";
 import TabMenu from "../../components/tab-menu";
 
 const Home: NextPage = () => {
-  return (
+  return (<>
     <div className="bg-black text-white">
       <DefaultTemplate>
-        <div
-          id="home"
-          className="section-hero text-white bg-gray-900 h-full flex flex-col justify-around py-20 px-4 sm:items-center"
-        >
-          <div className="capitalize text-4xl sm:text-5xl sm:text-center md:text-6xl max-w-2xl my-10">
-            <span className="text-orange-600">Together</span> in building the
-            future of <span className="text-pink-500">Web3</span>
-          </div>
-          <div className="mb-10">Reimagine. Connect. Execute</div>
-          <button className="rounded-full bg-pink-700 px-3 py-1 text-center text-xl py-3 w-full max-w-xs sm:max-w-sm">
-            Book a call
-          </button>
-        </div>
-        <div
-          id="vision"
-          className="section-vision py-20 px-4 flex flex-col justify-center md:flex-row md:flex-wrap items-center "
-        >
-          <div className="max-w-2xl">
-            <div className="order-1 md:order-1 md:grow-1">
-              <h2 className="text-4xl pb-10">
-                We dream of a new tomorrow geared towards mass adoption and
-                decentralization
-              </h2>
-            </div>
-            <div className="order-3 md:order-2 md:flex-1">
-              <p>
-                We believe that for web 3 to be truly limitless, like-minded
-                individuals must come together to create innovative solutions.
-                Traditional marketing, education and structure is slowly coming
-                to an end, advancements in technology can soon takeover the
-                realm we people used to dominate. But human ingenuity and
-                imagination can never be out performed by the sheer complexity
-                of today&apos;s technology. Through the power of making strong
-                and genuine connections, we will be able to surpass the
-                limitations of our modern day solutions. Afterall, without us,
-                advancements would have never existed.
-              </p>
-            </div>
-            <div className="order-2 flex justify-center py-10 md:order-3 md:flex-1">
-              <Image src={"/logo.png"} width={"200px"} height={"200px"} />
-            </div>
-          </div>
-        </div>
-        <div
-          id="ecosystem"
-          className="section section-ecosystem py-20 px-4 flex flex-col items-center bg-gray-900"
-        >
-          <div className="max-w-2xl">
-            <div className="">
-              <div className="text-3xl mb-4">VIRIONLABS ECOSYSTEM</div>
-              <div className="text-lg my-10">
-                OUR FLAGSHIP OFFERINGS THAT WILL MAKE OUR VISION A REALITY
-              </div>
-            </div>
-            <TabMenu
-              items={[
-                {
-                  title: "Virion Solutions",
-                  active: true,
-                  content: {
-                    title: "Work with us",
-                    text: `Let Virion Labs' core team handle your headache! From ideation to
-            implementation, we got you covered! With over 4 years of
-            experience and numerous case studies, there is no problem we wont
-            be able to create a solution for.`,
-                  },
-                },
-                {
-                  title: "Virion Connect",
-                  active: false,
-                  content: {
-                    title: "Tap into our resources!",
-                    text: `With Virion Connect, you will be able to hand pick highly
-            qualified talents and specially curate a team that will take your
-            project to the next level! Get access to our database of over
-            15,000 skilled web 3 talents now!`,
-                  },
-                },
-                {
-                  title: "Virion Node System",
-                  active: false,
-                  content: {
-                    title: "Need a quick broadcast?",
-                    text: `Virion node system is a powerful broadcasting tool that allows
-            project founders like you to gain instant exposure to thousands of
-            users across the globe.`,
-                  },
-                },
-              ]}
-            />
-          </div>
-        </div>
-        <div
-          id="why"
-          className="section text-black section-why py-20 px-4 flex flex-col items-center bg-gray-200"
-        >
-          <div className="max-w-2xl">
-            <div className="text-black">
-              <div className="text-3xl mb-4">WHY CHOOSE VIRION LABS?</div>
-              <div className="text-lg mb-10">
-                We bring creative solutions to make what seems to be impossible
-                possible.
-              </div>
-            </div>
-            <div>
-              <div className="bg-slate-300 p-6 rounded-3xl mt-4">
-                <div className="text-4xl pb-4 text-pink-700">Reimagine</div>
-                <div>
-                  With our core team&apos;s combined experience in project
-                  management, marketing, community development and tech, we will
-                  be able to facilitate the ideation phase for your WEB 3
-                  project in a fast paced and cost efficient manner.
+
+    <div className="pb_sm--0 banner-area banner-svg bg-image-svg-1 bg_image rn-section-gap with-down-shadow">
+        <div className="container">
+            <div className="row g-5 d-flex align-items-center">
+                <div className="col-lg-7 order-lg-1 order-md-2 order-sm-2 order-2">
+                    <div className="banner-left-bg-svg">
+                        <h1 className="title">Launch your own NFT Marketplace or NFT Store in Minutes</h1>
+                        <p className="disc">
+                            Grow your NFT brand with zero technical expertise, creator & enterprise friendly features,
+                            complete customisation, and tons of integrations
+                        </p>
+                        <div className="input-group">
+                            <input type="text" className="form-control" placeholder="Your username" aria-label="Recipient's username"/>
+                            <div className="input-group-append">
+                                <button className="btn btn-primary btn-outline-secondary" type="button">Subscribe <i
+                                        data-feather="chevrons-right"></i></button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
-              <div className="bg-slate-300 p-6 rounded-3xl mt-4">
-                <div className="text-4xl pb-4 text-pink-700">Connect</div>
-                <div>
-                  We built Virion Labs with the objective of being a marketing
-                  powerhouse by bringing together different WEB 3 communities,
-                  teams, founders and projects. By doing so, we are able to
-                  speed up the building process for project founders by
-                  leveraging the power of networking to your advantage.
+                <div className="col-lg-5 order-lg-2 order-md-1 order-sm-1 order-1">
+                    <div className="tilt-image-banner-16">
+                        <img className="tilt" src="assets/images/banner/banner-10.png" alt="Nft-profile"/>
+                        <div className="joined-people-wrapper">
+                            <div className="product-share-wrapper">
+                                <div className="profile-share">
+                                    <a href="author.html" className="avatar" data-tooltip="Mark JOrdan" tabIndex={0}><img className="large" src="assets/images/client/client-2.png" alt="Nft_Profile"/></a>
+                                    <a href="author.html" className="avatar" data-tooltip="Mark" tabIndex={0}><img className="large" src="assets/images/client/client-3.png" alt="Nft_Profile"/></a>
+                                    <a href="author.html" className="avatar" data-tooltip="Jordan" tabIndex={0}><img className="large" src="assets/images/client/client-5.png" alt="Nft_Profile"/></a>
+                                    <a href="author.html" className="avatar" data-tooltip="Mark JOrdan" tabIndex={0}><img className="large" src="assets/images/client/client-2.png" alt="Nft_Profile"/></a>
+                                    <a className="more-author-text" href="#" tabIndex={0}>More Then 25K</a>
+                                </div>
+                            </div>
+                            <p className="disc">Million of people are sell there NFTs in Virion Labsmarketplaces. Create & Sell
+                                Your NFT's.</p>
+                        </div>
+                    </div>
                 </div>
-              </div>
-              <div className="bg-slate-300 p-6 rounded-3xl mt-4">
-                <div className="text-4xl pb-4 text-pink-700">Execute</div>
-                <div>
-                  Our talents go through a rigorous training and selection
-                  process to make sure we are getting the best of the best.
-                  Regardless of their previous experience and position, when
-                  entering Virion Labs, they will all be treated the same. After
-                  a 3 step skills and knowledge assessment, talents are then
-                  assigned ranks based on their understanding of WEB 3
-                  principles and their performance on the positions they
-                  selected to enlist in. This is how we are able to maintain a
-                  certain level of proficiency and make sure the reimagined
-                  steps are executed properly.
+            </div>
+        </div>
+    </div>
+
+
+     {/* keyfeature area */}
+    <div className="key-feature-area rn-section-gapTop">
+        <div className="container">
+            <div className="row g-5">
+                <div className="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
+                    <h2 className="title">Our Key Features</h2>
+                    <p className="disc pr--20">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam et, eligendi cum
+                        vitae.</p>
                 </div>
-              </div>
+                <div className="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-2">
+                    <div className="single-key">
+                        <i data-feather="cast"></i>
+                        <label>Whitelabel Storefront</label>
+                    </div>
+                </div>
+                <div className="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-2">
+                    <div className="single-key">
+                        <i data-feather="alert-octagon"></i>
+                        <label>APIs (Detailed)
+                        </label>
+                    </div>
+                </div>
+                <div className="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                    <div className="single-key">
+                        <i data-feather="archive"></i>
+                        <label>Security & Interoperability</label>
+                    </div>
+                </div>
+                <div className="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                    <div className="single-key">
+                        <i data-feather="box"></i>
+                        <label>Easy distribution</label>
+                    </div>
+                </div>
+                <div className="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                    <div className="single-key">
+                        <i data-feather="monitor"></i>
+                        <label>Email Service Integration</label>
+                    </div>
+                </div>
+                <div className="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                    <div className="single-key">
+                        <i data-feather="clock"></i>
+                        <label>Your own ERC20 as Currency
+                        </label>
+                    </div>
+                </div>
+                <div className="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                    <div className="single-key">
+                        <i data-feather="coffee"></i>
+                        <label>Fiat Support (eg. USD)
+                        </label>
+                    </div>
+                </div>
+                <div className="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                    <div className="single-key">
+                        <i data-feather="compass"></i>
+                        <label>Team Access</label>
+                    </div>
+                </div>
+                <div className="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                    <div className="single-key">
+                        <i data-feather="command"></i>
+                        <label>Drag & Drop Store Builder</label>
+                    </div>
+                </div>
+                <div className="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                    <div className="single-key">
+                        <i data-feather="database"></i>
+                        <label>Crosschain Support
+                        </label>
+                    </div>
+                </div>
+                <div className="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                    <div className="single-key">
+                        <i data-feather="moon"></i>
+                        <label>Trade NFTs</label>
+                    </div>
+                </div>
+                <div className="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                    <div className="single-key">
+                        <i data-feather="gift"></i>
+                        <label>Whitelabel Storefront</label>
+                    </div>
+                </div>
+                <div className="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                    <div className="single-key">
+                        <i data-feather="globe"></i>
+                        <label>Whitelabel Storefront
+                        </label>
+                    </div>
+                </div>
+                <div className="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                    <div className="single-key">
+                        <i data-feather="image"></i>
+                        <label>Fiat Support (eg. USD)</label>
+                    </div>
+                </div>
+                <div className="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                    <div className="single-key">
+                        <i data-feather="map"></i>
+                        <label>Whitelabel Storefront</label>
+                    </div>
+                </div>
+                <div className="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                    <div className="single-key">
+                        <i data-feather="package"></i>
+                        <label>Airdrop (Initial NFT Offerings)</label>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-        <div
-          id="partners"
-          className="section py-20 section-partners px-4 flex flex-col items-center bg-slate-900"
-        >
-          <div className="max-w-2xl">
-            <div className="text-3xl mb-4">VIRION LABS INDUSTRY PARTNERS</div>
-            <div className="flex flex-wrap justify-between mt-10">
-              <div className="w-28 h-28 md:w-32 md:h-32 rounded-full bg-white mb-4"></div>
-              <div className="w-28 h-28 md:w-32 md:h-32  rounded-full bg-white mb-4"></div>
-              <div className="w-28 h-28 md:w-32 md:h-32  rounded-full bg-white mb-4"></div>
-              <div className="w-28 h-28 md:w-32 md:h-32  rounded-full bg-white mb-4"></div>
-              <div className="w-28 h-28 md:w-32 md:h-32  rounded-full bg-white mb-4"></div>
-              <div className="w-28 h-28 md:w-32 md:h-32  rounded-full bg-white mb-4"></div>
+    </div>
+     {/* keyfeature area End*/}
+
+
+
+     {/* Modal */}
+    <div className="rn-popup-modal share-modal-wrapper modal fade" id="shareModal" tabIndex={-1} aria-hidden="true">
+        <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"><i data-feather="x"></i></button>
+        <div className="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div className="modal-content share-wrapper">
+                <div className="modal-header share-area">
+                    <h5 className="modal-title">Share this NFT</h5>
+                </div>
+                <div className="modal-body">
+                    <ul className="social-share-default">
+                        <li><a href="#"><span className="icon"><i data-feather="facebook"></i></span><span className="text">facebook</span></a></li>
+                        <li><a href="#"><span className="icon"><i data-feather="twitter"></i></span><span className="text">twitter</span></a></li>
+                        <li><a href="#"><span className="icon"><i data-feather="linkedin"></i></span><span className="text">linkedin</span></a></li>
+                        <li><a href="#"><span className="icon"><i data-feather="instagram"></i></span><span className="text">instagram</span></a></li>
+                        <li><a href="#"><span className="icon"><i data-feather="youtube"></i></span><span className="text">youtube</span></a></li>
+                    </ul>
+                </div>
             </div>
-          </div>
         </div>
-        <div className="section cta py-20 h-full px-4 align-center flex flex-col items-center">
-          <div className="max-w-2xl flex-col">
-            <div className="text-3xl mb-4">
-              Are you ready to unlock the power of virion labs?
+    </div>
+     {/* Modal */}
+    <div className="rn-popup-modal report-modal-wrapper modal fade" id="reportModal" tabIndex={-1} aria-hidden="true">
+        <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"><i data-feather="x"></i></button>
+        <div className="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div className="modal-content report-content-wrapper">
+                <div className="modal-header report-modal-header">
+                    <h5 className="modal-title">Why are you reporting?
+                    </h5>
+                </div>
+                <div className="modal-body">
+                    <p>Describe why you think this item should be removed from marketplace</p>
+                    <div className="report-form-box">
+                        <h6 className="title">Message</h6>
+                        <textarea name="message" placeholder="Write issues"></textarea>
+                        <div className="report-button">
+                            <button type="button" className="btn btn-primary mr--10 w-auto">Report</button>
+                            <button type="button" className="btn btn-primary-alta w-auto" data-bs-dismiss="modal">Cancel</button>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div className="my-8">
-              Book a free call with us. No time wasted. Just pure value.
-            </div>
-            <div className="rounded-full bg-pink-700 px-3 py-1 text-center text-xl py-3 max-w-sm">
-              <button>Reimagine</button>
-            </div>
-          </div>
         </div>
+    </div>
+     {/* Modal */}
+    <div className="rn-popup-modal placebid-modal-wrapper modal fade" id="placebidModal" tabIndex={-1} aria-hidden="true">
+        <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"><i data-feather="x"></i></button>
+        <div className="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div className="modal-content">
+                <div className="modal-header">
+                    <h3 className="modal-title">Place a bid</h3>
+                </div>
+                <div className="modal-body">
+                    <p>You are about to purchase This Product Form Virion Labs</p>
+                    <div className="placebid-form-box">
+                        <h5 className="title">Your bid</h5>
+                        <div className="bid-content">
+                            <div className="bid-content-top">
+                                <div className="bid-content-left">
+                                    <input id="value" type="text" name="value"/>
+                                    <span>wETH</span>
+                                </div>
+                            </div>
+
+                            <div className="bid-content-mid">
+                                <div className="bid-content-left">
+                                    <span>Your Balance</span>
+                                    <span>Service fee</span>
+                                    <span>Total bid amount</span>
+                                </div>
+                                <div className="bid-content-right">
+                                    <span>9578 wETH</span>
+                                    <span>10 wETH</span>
+                                    <span>9588 wETH</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="bit-continue-button">
+                            <a href="connect.html" className="btn btn-primary w-100">Place a bid</a>
+                            <button type="button" className="btn btn-primary-alta mt--10" data-bs-dismiss="modal">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+     {/* Start Footer Area */}
+    <div className="rn-footer-one rn-section-gapBottom bg-color--1 mt--100 mt_md--80 mt_sm--80 pt--80">
+
+        <div className="container">
+            <div className="row gx-5">
+                <div className="col-lg-3 col-md-6 col-sm-6 col-12">
+                    <div className="widget-content-wrapper">
+                        <div className="footer-left">
+                            <div className="logo-thumbnail logo-custom-css">
+                                <a className="logo-light" href="index.html"><img src="assets/images/logo/logo-horizontal.png" alt="nft-logo"/></a>
+                                <a className="logo-dark" href="index.html"><img src="assets/images/logo/logo-dark.png" alt="nft-logo"/></a>
+                            </div>
+                            <p className="rn-footer-describe">
+                                Created with the collaboration of over 60 of the world's best Virion LabsArtists.
+                            </p>
+                        </div>
+                        <div className="widget-bottom mt--40 pt--40">
+                            <h6 className="title">Get The Latest Virion LabsUpdates </h6>
+                            <div className="input-group">
+                                <input type="text" className="form-control bg-color--2" placeholder="Your username" aria-label="Recipient's username"/>
+                                <div className="input-group-append">
+                                    <button className="btn btn-primary-alta btn-outline-secondary" type="button">Subscribe</button>
+                                </div>
+                            </div>
+                            <div className="newsletter-dsc">
+                                <p>Email is safe. We don't spam.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="col-lg-3 col-md-6 col-sm-6 col-12 mt_mobile--40">
+                    <div className="footer-widget widget-quicklink">
+                        <h6 className="widget-title">Virion Labs</h6>
+                        <ul className="footer-list-one">
+                            <li className="single-list"><a href="#">Protocol Explore</a></li>
+                            <li className="single-list"><a href="#">System Token</a></li>
+                            <li className="single-list"><a href="#">Otimize Time</a></li>
+                            <li className="single-list"><a href="#">Visual Checking</a></li>
+                            <li className="single-list"><a href="#">Fadeup System</a></li>
+                            <li className="single-list"><a href="#">Activity Log</a></li>
+                            <li className="single-list"><a href="#">System Auto Since</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div className="col-lg-3 col-md-6 col-sm-6 col-12 mt_md--40 mt_sm--40">
+                    <div className="footer-widget widget-information">
+                        <h6 className="widget-title">Information</h6>
+                        <ul className="footer-list-one">
+                            <li className="single-list"><a href="#">Market Explore</a></li>
+                            <li className="single-list"><a href="#">Ready Token</a></li>
+                            <li className="single-list"><a href="#">Main Option</a></li>
+                            <li className="single-list"><a href="#">Product Checking</a></li>
+                            <li className="single-list"><a href="blog.html">Blog Grid</a></li>
+                            <li className="single-list"><a href="about.html">About Us</a></li>
+                            <li className="single-list"><a href="#">Fix Bug </a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div className="col-lg-3 col-md-6 col-sm-6 col-12 mt_md--40 mt_sm--40">
+                    <div className="footer-widget">
+                        <h6 className="widget-title">Recent Sold Out</h6>
+                        <ul className="footer-recent-post">
+                            <li className="recent-post">
+                                <div className="thumbnail">
+                                    <a href="product-details.html">
+                                        <img src="assets/images/portfolio/portfolio-01.jpg" alt="Product Images"/>
+                                    </a>
+                                </div>
+                                <div className="content">
+                                    <h6 className="title"><a href="product-details.html">#21 The Wonder</a></h6>
+                                    <p>Highest bid 1/20</p>
+                                    <span className="price">0.244wETH</span>
+                                </div>
+                            </li>
+                            <li className="recent-post">
+                                <div className="thumbnail">
+                                    <a href="product-details.html">
+                                        <img src="assets/images/portfolio/portfolio-02.jpg" alt="Product Images"/>
+                                    </a>
+                                </div>
+                                <div className="content">
+                                    <h6 className="title"><a href="product-details.html">Diamond Dog</a></h6>
+                                    <p>Highest bid 1/20</p>
+                                    <span className="price">0.022wETH</span>
+                                </div>
+                            </li>
+                            <li className="recent-post">
+                                <div className="thumbnail">
+                                    <a href="product-details.html">
+                                        <img src="assets/images/portfolio/portfolio-03.jpg" alt="Product Images"/>
+                                    </a>
+                                </div>
+                                <div className="content">
+                                    <h6 className="title"><a href="product-details.html">Morgan11</a></h6>
+                                    <p>Highest bid 1/20</p>
+                                    <span className="price">0.892wETH</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+     {/* End Footer Area */}
+     {/* Start Footer Area */}
+    <div className="copy-right-one ptb--20 bg-color--1">
+        <div className="container">
+            <div className="row align-items-center">
+                <div className="col-lg-6 col-md-12 col-sm-12">
+                    <div className="copyright-left">
+                        <span>©2023 Virion Labs. All rights reserved.</span>
+                        <ul className="privacy">
+                            <li><a href="terms-condition.html">Terms</a></li>
+                            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div className="col-lg-6 col-md-12 col-sm-12">
+                    <div className="copyright-right">
+                        <ul className="social-copyright">
+                            <li><a href="#"><i data-feather="facebook"></i></a></li>
+                            <li><a href="#"><i data-feather="twitter"></i></a></li>
+                            <li><a href="#"><i data-feather="instagram"></i></a></li>
+                            <li><a href="#"><i data-feather="linkedin"></i></a></li>
+                            <li><a href="#"><i data-feather="mail"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
       </DefaultTemplate>
     </div>
+    </>
   );
 };
 

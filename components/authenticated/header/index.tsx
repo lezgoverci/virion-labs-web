@@ -62,7 +62,7 @@ export default function Header() {
           </div>
           <div className="flex-1 md:flex-none">
             <div className="hidden self-start">
-              <Image src={"/logo.png"} width={"100"} height={"100"} />
+              <Image src={"/logo-pink-white.png"} width={"100"} height={"100"} />
             </div>
 
             <Link href="/" className="pl-3">Virion Labs</Link>
