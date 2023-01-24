@@ -340,10 +340,10 @@ const Home = () => {
                   <div className="subtitle">Step-03</div>
                   <div className="content">
                     <h4 className="title">
-                      <a href="#">Add your NFT's</a>
+                      <a href="#">Add your NFT&apos;s</a>
                     </h4>
                     <p className="description">
-                      We've made the template fully responsive, so it looks
+                      We&apos;ve made the template fully responsive, so it looks
                       great on all devices: desktop, tablets and.
                     </p>
                     <a className="read-more-button" href="#">
@@ -374,11 +374,11 @@ const Home = () => {
                   <div className="subtitle">Step-04</div>
                   <div className="content">
                     <h4 className="title">
-                      <a href="#">Sell Your NFT's</a>
+                      <a href="#">Sell Your NFT&apos;s</a>
                     </h4>
                     <p className="description">
                       I throw myself down among the tall grass by the stream as
-                      I lie close to the earth NFT's.
+                      I lie close to the earth NFT&apos;s.
                     </p>
                     <a className="read-more-button" href="#">
                       <i className="feather-arrow-right"></i>
