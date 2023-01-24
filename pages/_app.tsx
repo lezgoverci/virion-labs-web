@@ -9,7 +9,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <Head>
         <meta charSet="utf-8" />
         <meta http-equiv="x-ua-compatible" content="ie=edge" />
-        <title>Log In || Nuron - NFT Marketplace Template</title>
+        <title>Virion Labs</title>
         <meta name="robots" content="noindex, follow" />
         <meta name="description" content="" />
         <meta
