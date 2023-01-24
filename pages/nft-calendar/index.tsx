@@ -38,8 +38,8 @@ export default function NftCalendar() {
 
   }, [data]);
 
-  const featuredListMarkup = data.map((item) => {
-    return <FeaturedProject title={item.title} />;
+  const featuredListMarkup = data.map((item,key) => {
+    return <FeaturedProject key={key} title={item.title} />;
   });
 
   return (
