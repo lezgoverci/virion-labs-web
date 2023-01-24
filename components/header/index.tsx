@@ -40,7 +40,7 @@ export default function Header() {
             <div className="header-left">
               <div className="logo-thumbnail logo-custom-css">
                 <a className="logo-light" href="index.html">
-                  <img src="assets/images/logo/logo-horizontal.png" alt="nft-logo" />
+                  <img src="/assets/images/logo/logo-horizontal.png" alt="nft-logo" />
                 </a>
                 <a className="logo-dark" href="index.html">
                   <img src="assets/images/logo/logo.png" alt="nft-logo" />
