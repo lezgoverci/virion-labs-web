@@ -36,7 +36,7 @@ const Home = () => {
                       <Image
                         width="60px"
                         height="60px"
-                        src="assets/images/icons/wallet/4.png"
+                        src="/assets/images/icons/wallet/4.png"
                         alt="wallet_image"
                       />
                     </a>
@@ -44,7 +44,7 @@ const Home = () => {
                       <Image
                         width="60px"
                         height="60px"
-                        src="assets/images/icons/wallet/7.png"
+                        src="/assets/images/icons/wallet/7.png"
                         alt="wallet_image"
                       />
                     </a>
@@ -52,7 +52,7 @@ const Home = () => {
                       <Image
                         width="60px"
                         height="60px"
-                        src="assets/images/icons/wallet/8.png"
+                        src="/assets/images/icons/wallet/8.png"
                         alt="wallet_image"
                       />
                     </a>
@@ -60,7 +60,7 @@ const Home = () => {
                       <Image
                         width="60px"
                         height="60px"
-                        src="assets/images/icons/wallet/1.png"
+                        src="/assets/images/icons/wallet/1.png"
                         alt="wallet_image"
                       />
                     </a>
@@ -68,7 +68,7 @@ const Home = () => {
                       <Image
                         width="60px"
                         height="60px"
-                        src="assets/images/icons/wallet/3.png"
+                        src="/assets/images/icons/wallet/3.png"
                         alt="wallet_image"
                       />
                     </a>
@@ -76,7 +76,7 @@ const Home = () => {
                       <Image
                         width="60px"
                         height="60px"
-                        src="assets/images/icons/wallet/2.png"
+                        src="/assets/images/icons/wallet/2.png"
                         alt="wallet_image"
                       />
                     </a>
@@ -84,7 +84,7 @@ const Home = () => {
                       <Image
                         width="60px"
                         height="60px"
-                        src="assets/images/icons/wallet/6.png"
+                        src="/assets/images/icons/wallet/6.png"
                         alt="wallet_image"
                       />
                     </a>
@@ -92,7 +92,7 @@ const Home = () => {
                       <Image
                         width="60px"
                         height="60px"
-                        src="assets/images/icons/wallet/5.png"
+                        src="/assets/images/icons/wallet/5.png"
                         alt="wallet_image"
                       />
                     </a>
@@ -262,10 +262,10 @@ const Home = () => {
                 className="rn-service-one color-shape-7"
               >
                 <div className="inner">
-                  <div className="icon w-10">
+                  <div className="icon ">
                     <Image
-                      layout="fill"
-                      src="assets/images/icons/shape-7.png"
+                      width="100px" height="100px"
+                      src="/assets/images/icons/shape-7.png"
                       alt="Shape"
                     />
                   </div>
@@ -296,10 +296,10 @@ const Home = () => {
                 className="rn-service-one color-shape-1"
               >
                 <div className="inner">
-                  <div className="icon w-10">
+                  <div className="icon ">
                     <Image
-                      layout="fill"
-                      src="assets/images/icons/shape-1.png"
+                      width="100px" height="100px"
+                      src="/assets/images/icons/shape-1.png"
                       alt="Shape"
                     />
                   </div>
@@ -330,10 +330,10 @@ const Home = () => {
                 className="rn-service-one color-shape-5"
               >
                 <div className="inner">
-                  <div className="icon w-10">
+                  <div className="icon ">
                     <Image
-                      layout="fill"
-                      src="assets/images/icons/shape-5.png"
+                      width="100px" height="100px"
+                      src="/assets/images/icons/shape-5.png"
                       alt="Shape"
                     />
                   </div>
@@ -364,10 +364,10 @@ const Home = () => {
                 className="rn-service-one color-shape-6"
               >
                 <div className="inner">
-                  <div className="icon w-10">
+                  <div className="icon ">
                     <Image
-                      layout="fill"
-                      src="assets/images/icons/shape-6.png"
+                      width="100px" height="100px"
+                      src="/assets/images/icons/shape-6.png"
                       alt="Shape"
                     />
                   </div>
