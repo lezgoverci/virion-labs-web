@@ -10,25 +10,25 @@ export default function Header() {
       title: "Home",
       link: "/#home",
       active: true,
-      icon: "feather-home"
+      icon: "feather-home",
     },
     {
       title: "Careers",
       link: "/careers",
       active: false,
-      icon: "feather-briefcase"
+      icon: "feather-briefcase",
     },
     {
       title: "Roadmap",
       link: "/roadmap",
       active: false,
-      icon: "feather-map"
+      icon: "feather-map",
     },
     {
       title: "Partners",
       link: "/partners",
       active: false,
-      icon: "feather-users"
+      icon: "feather-users",
     },
   ]);
 
@@ -40,7 +40,10 @@ export default function Header() {
             <div className="header-left">
               <div className="logo-thumbnail logo-custom-css">
                 <a className="logo-light" href="index.html">
-                  <img src="/assets/images/logo/logo-horizontal.png" alt="nft-logo" />
+                  <img
+                    src="/assets/images/logo/logo-horizontal.png"
+                    alt="nft-logo"
+                  />
                 </a>
                 <a className="logo-dark" href="index.html">
                   <img src="assets/images/logo/logo.png" alt="nft-logo" />
@@ -49,14 +52,12 @@ export default function Header() {
               <div className="mainmenu-wrapper">
                 <nav id="sideNav" className="mainmenu-nav d-none d-xl-block">
                   <ul className="mainmenu">
-                    {navList.map((li,index) => {
+                    {navList.map((li, index) => {
                       return (
                         <li key={index}>
-
                           <a href={`${li.link}`}>
-                          <i className={`${li.icon} mr--5`}></i>
+                            <i className={`${li.icon} mr--5`}></i>
                             {li.title}
-
                           </a>
                         </li>
                       );
@@ -106,14 +107,13 @@ export default function Header() {
                 id="rbt-site-header"
               >
                 <div className="icon-box">
-                  <a
-                    id="connectbtn"
+                  <Link
                     className="btn btn-primary-alta btn-small"
-
+                    id="connectbtn"
+                    href={"/login"}
                   >
-                    <Link href={"/login"}>Wallet connect</Link>
-
-                  </a>
+                    Wallet connect
+                  </Link>
                 </div>
               </div>
 

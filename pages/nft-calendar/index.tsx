@@ -1,46 +1,44 @@
-import { TestComponent } from "../../components/test-component";
-import DefaultTemplate from "../../templates/default";
-import { FeaturedProject } from "../../components/featured-project";
-import { useEffect, useState } from "react";
 
-export default function NftCalendar() {
-  const INITIAL_DATA = [
-    {
-      title: "VeeFriends",
-    },
-    {
-      title: "Tykes NFT",
-    },
-    {
-      title: "NFT Academy",
-    },
-    {
-      title: "Gents Croquet Club",
-    },
-  ];
+import DefaultTemplate from "../../templates/default";
+import { useEffect, useState } from "react";
+import { NftProject as NftProjectType } from "../../types/nftProject";
+import { GetServerSideProps } from "next";
+import useTransformNftProjectType from "../../hooks/useTransformNftProject";
+
+
+
+type Props = {
+  data: NftProjectType;
+};
+
+export default function NftCalendar(props) {
+  const INITIAL_DATA : NftProjectType[]= [];
 
   const [data, setData] = useState(INITIAL_DATA);
   const [filteredData, setFilteredData] = useState([])
 
-  const getData = () =>{
-    fetch("http://localhost:1337/api/nft-projects")
-    .then(res => res.json())
-    .then(res => console.log(res))
-    .catch(err => console.log(err))
-  }
+
+  // const getData = () =>{
+  //   fetch("/api/nft-projects")
+  //   .then(res => res.json())
+  // //  .then(res => setData(res.data))
+  //   .catch(err => console.log(err))
+  // }
 
 
   useEffect(() => {
-    getData()
-  }, []);
-
-  useEffect(() => {
-
+    console.log("data",data)
   }, [data]);
 
-  const featuredListMarkup = data.map((item,key) => {
-    return <FeaturedProject key={key} title={item.title} />;
+  useEffect(() => {
+    console.log("props", props)
+    setData(props.data.data)
+  }, [props]);
+
+  const featuredListMarkup = data.map(item =>{
+    return <li>{item.attributes?.name}</li>
   });
+
 
   return (
     <>
@@ -55,3 +53,11 @@ export default function NftCalendar() {
     </>
   );
 }
+
+
+export const getServerSideProps: GetServerSideProps<Props> = async () => {
+  const response = await fetch("http://127.0.0.1:3000/api/nft-projects");
+  const data = await response.json();
+
+  return { props: { data } };
+};

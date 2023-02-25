@@ -51,34 +51,34 @@ function MyApp({ Component, pageProps }: AppProps) {
       </div>
       {/* <!-- End Top To Bottom Area  --> */}
       {/* <!-- JS ============================================ --> */}
-      <Script src="/assets/js/vendor/jquery.js"/>
-      <Script src="/assets/js/vendor/jquery.nice-select.min.js"/>
-      <Script src="/assets/js/vendor/jquery-ui.js"/>
-      <Script src="/assets/js/vendor/modernizer.min.js"/>
-      <Script src="/assets/js/vendor/feather.min.js"/>
-      <Script src="/assets/js/vendor/slick.min.js"/>
-      <Script src="/assets/js/vendor/bootstrap.min.js"/>
-      <Script src="/assets/js/vendor/sal.min.js"/>
-      <Script src="/assets/js/vendor/particles.js"/>
-      <Script src="/assets/js/vendor/jquery.style.swicher.js"/>
-      <Script src="/assets/js/vendor/js.cookie.js"/>
-      <Script src="/assets/js/vendor/count-down.js"/>
-      <Script src="/assets/js/vendor/isotop.js"/>
-      <Script src="/assets/js/vendor/imageloaded.js"/>
-      <Script src="/assets/js/vendor/backtoTop.js"/>
-      <Script src="/assets/js/vendor/odometer.js"/>
-      <Script src="/assets/js/vendor/jquery-appear.js"/>
-      <Script src="/assets/js/vendor/scrolltrigger.js"/>
-      <Script src="/assets/js/vendor/jquery.custom-file-input.js"/>
-      <Script src="/assets/js/vendor/savePopup.js"/>
-      <Script src="/assets/js/vendor/vanilla.tilt.js"/>
+      <Script strategy="beforeInteractive" src="/assets/js/vendor/jquery.js"/>
+      <Script strategy="beforeInteractive" src="/assets/js/vendor/jquery.nice-select.min.js"/>
+      <Script strategy="beforeInteractive" src="/assets/js/vendor/jquery-ui.js"/>
+      <Script strategy="beforeInteractive" src="/assets/js/vendor/modernizer.min.js"/>
+      <Script strategy="beforeInteractive" src="/assets/js/vendor/feather.min.js"/>
+      <Script strategy="beforeInteractive" src="/assets/js/vendor/slick.min.js"/>
+      <Script strategy="beforeInteractive" src="/assets/js/vendor/bootstrap.min.js"/>
+      <Script strategy="beforeInteractive" src="/assets/js/vendor/sal.min.js"/>
+      <Script strategy="beforeInteractive" src="/assets/js/vendor/particles.js"/>
+      <Script strategy="beforeInteractive" src="/assets/js/vendor/jquery.style.swicher.js"/>
+      <Script strategy="beforeInteractive" src="/assets/js/vendor/js.cookie.js"/>
+      <Script strategy="beforeInteractive" src="/assets/js/vendor/count-down.js"/>
+      <Script strategy="beforeInteractive" src="/assets/js/vendor/isotop.js"/>
+      <Script strategy="beforeInteractive" src="/assets/js/vendor/imageloaded.js"/>
+      <Script strategy="beforeInteractive" src="/assets/js/vendor/backtoTop.js"/>
+      <Script strategy="beforeInteractive" src="/assets/js/vendor/odometer.js"/>
+      <Script strategy="beforeInteractive" src="/assets/js/vendor/jquery-appear.js"/>
+      <Script strategy="beforeInteractive" src="/assets/js/vendor/scrolltrigger.js"/>
+      <Script strategy="beforeInteractive" src="/assets/js/vendor/jquery.custom-file-input.js"/>
+      <Script strategy="beforeInteractive" src="/assets/js/vendor/savePopup.js"/>
+      <Script strategy="beforeInteractive" src="/assets/js/vendor/vanilla.tilt.js"/>
 
       {/* <!-- main JS --> */}
-      <Script src="/assets/js/main.js"/>
+      <Script strategy="beforeInteractive" src="/assets/js/main.js"/>
       {/* <!-- Meta Mask  --> */}
-      <Script src="/assets/js/vendor/web3.min.js"/>
-      <Script src="/assets/js/vendor/maralis.js"/>
-      <Script src="/assets/js/vendor/nft.js"/>
+      <Script strategy="beforeInteractive" src="/assets/js/vendor/web3.min.js"/>
+      <Script strategy="beforeInteractive" src="/assets/js/vendor/maralis.js"/>
+      <Script strategy="beforeInteractive" src="/assets/js/vendor/nft.js"/>
     </>
   );
 }
