@@ -80,7 +80,7 @@ const Home = () => {
                       data-sal-duration="800"
                       data-sal-delay="150"
                     >
-                      Let Virion Labs' core team handle your headache! From
+                      Let Virion Labs&apos; core team handle your headache! From
                       ideation to implementation, we got you covered! With over
                       4 years of experience and numerous case studies, there is
                       no problem we wont be able to create a solution for.
@@ -205,7 +205,7 @@ const Home = () => {
                       <a href="#">Virion Solutions</a>
                     </h4>
                     <p className="description">
-                      Let Virion Labs' core team handle your headache! From
+                      Let Virion Labs&apos; core team handle your headache! From
                       ideation to implementation, we got you covered! With over
                       4 years of experience and numerous case studies, there is
                       no problem we wont be able to create a solution for.
