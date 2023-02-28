@@ -1,6 +1,5 @@
 // import "../styles/globals.css";
 import type { AppProps } from "next/app";
-import { NextScript } from "next/document";
 import Head from "next/head";
 import Script from "next/script";
 
