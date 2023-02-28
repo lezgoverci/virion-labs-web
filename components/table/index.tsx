@@ -1,6 +1,7 @@
 import Image from "next/image";
+import { NftProject } from "../../types/nftProject";
 
-export function Table({ rows, headers }) {
+export function Table({ rows, headers }:{rows: NftProject[], headers: string[]}) {
     console.log("rows",rows)
   return (
     <div className="box-table table-responsive">
