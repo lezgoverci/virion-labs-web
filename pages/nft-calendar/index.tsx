@@ -10,27 +10,12 @@ type Props = {
   data: NftProjectType;
 };
 
-export default function NftCalendar(props) {
+export default function NftCalendar(props: Props) {
   const INITIAL_DATA: NftProjectType[] = [];
 
   const [data, setData] = useState(INITIAL_DATA);
   const [filteredData, setFilteredData] = useState([]);
 
-  // const getData = () =>{
-  //   fetch("/api/nft-projects")
-  //   .then(res => res.json())
-  // //  .then(res => setData(res.data))
-  //   .catch(err => console.log(err))
-  // }
-
-  useEffect(() => {
-    console.log("data", data);
-  }, [data]);
-
-  useEffect(() => {
-    console.log("props", props);
-    setData(props.data.data);
-  }, [props]);
 
   const featuredListMarkup = <Carousel data={data} />;
 
