@@ -20,7 +20,7 @@ export default function NftCalendar({projects}: Props) {
 
   useEffect(()=>{
     console.log("projects",projects)
-  if(projects.data.length > 0){
+  if(projects.data?.length > 0){
     setData(projects.data)
   }
   },[projects])
@@ -523,8 +523,17 @@ export default function NftCalendar({projects}: Props) {
 }
 
 export const getServerSideProps: GetServerSideProps<Props> = async () => {
-  const response = await fetch(`${process.env.APP_URI}/api/nft-projects`);
-  const projects = await response.json();
+  const url = `${process.env.NEXT_PUBLIC_APP_URI}/api/nft-projects`;
+  console.log("url", url)
 
-  return { props: { projects } };
+
+    const response = await fetch(url);
+    const projects = await response.json();
+
+    console.log("response",response)
+
+    return { props: { projects } };
+
+
+
 };

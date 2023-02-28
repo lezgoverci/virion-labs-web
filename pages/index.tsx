@@ -16,7 +16,7 @@ const Home: NextPage = () => {
   return <>
     <Head>
     <meta charSet="utf-8" />
-        <meta http-equiv="x-ua-compatible" content="ie=edge" />
+        <meta httpEquiv="x-ua-compatible" content="ie=edge" />
         <title>Log In || Nuron - NFT Marketplace Template</title>
         <meta name="robots" content="noindex, follow" />
         <meta name="description" content="" />
