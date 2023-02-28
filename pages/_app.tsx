@@ -57,7 +57,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <Script   src="/assets/js/vendor/scrolltrigger.js" />
       <Script  src="/assets/js/vendor/jquery.custom-file-input.js" />
       <Script  src="/assets/js/vendor/savePopup.js" />
-      <Script  src="/assets/js/vendor/vanilla.tilt.js" />
+      <Script strategy="beforeInteractive" src="/assets/js/vendor/vanilla.tilt.js" />
 
       <Script strategy="afterInteractive" src="/assets/js/main.js" />
       {/* <!-- Meta Mask  --> */}
