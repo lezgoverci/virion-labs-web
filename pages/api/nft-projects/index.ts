@@ -6,7 +6,7 @@ type MyData = {
   email: string;
 };
 
-const strapiEndpoint = process.env.API_URI;
+const strapiEndpoint = process.env.NEXT_PUBLIC_API_URI;
 
 export default async function handler(
   req: NextApiRequest,
@@ -15,7 +15,7 @@ export default async function handler(
 
     const response = await axios.get(`${strapiEndpoint}/nft-projects`, {
       headers: {
-        Authorization: `Bearer ${process.env.API_TOKEN}`,
+        Authorization: `Bearer ${process.env.NEXT_PUBLIC_API_TOKEN}`,
       },
     });
 

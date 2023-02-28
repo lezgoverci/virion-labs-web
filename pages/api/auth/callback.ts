@@ -10,9 +10,9 @@ export default async function handler(
   res: NextApiResponse<Data>
 ) {
   try {
-    const data = await fetch(`${process.env.API_URI}/users`, {
+    const data = await fetch(`${process.env.NEXT_PUBLIC_API_URI}/users`, {
       headers: {
-        "Authorization": `Bearer ${process.env.API_TOKEN}`,
+        "Authorization": `Bearer ${process.env.NEXT_PUBLIC_API_TOKEN}`,
         "Content-Type": "application/json",
       },
     }) // strapi API
