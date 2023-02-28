@@ -7,14 +7,23 @@ import { Table } from "../../components/table";
 import { Carousel } from "../../components/carousel";
 
 type Props = {
-  data: NftProjectType;
+  projects: {
+    data: NftProjectType[]
+  };
 };
 
-export default function NftCalendar(props: Props) {
+export default function NftCalendar({projects}: Props) {
   const INITIAL_DATA: NftProjectType[] = [];
 
   const [data, setData] = useState(INITIAL_DATA);
   const [filteredData, setFilteredData] = useState([]);
+
+  useEffect(()=>{
+    console.log("projects",projects)
+  if(projects.data.length > 0){
+    setData(projects.data)
+  }
+  },[projects])
 
 
   const featuredListMarkup = <Carousel data={data} />;
@@ -515,7 +524,7 @@ export default function NftCalendar(props: Props) {
 
 export const getServerSideProps: GetServerSideProps<Props> = async () => {
   const response = await fetch("http://127.0.0.1:3000/api/nft-projects");
-  const data = await response.json();
+  const projects = await response.json();
 
-  return { props: { data } };
+  return { props: { projects } };
 };
