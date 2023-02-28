@@ -13,90 +13,22 @@ const Home = () => {
     <>
       <Header />
 
-      <div className="banner-area banner-12 bg_image--23 bg_image with-down-shadow">
+      <div className="banner-area banner-12 bg_image--hero bg_image ">
         <div className="container">
           <div className="row">
             <div className="col-lg-12">
               <div className="banner-xii-wrapper">
                 <div className="banner-content-wrapper">
-                  <p className="pre-title">Nuron marketplace</p>
+                  <p className="pre-title">Virion Labs</p>
                   <h1 className="title">
-                    Dive into NFTs marketplace with a relevant Product
+                  Reimagine. Connect. Execute.
+
                   </h1>
-                  <p className="post-title">
-                    Unit of data stored on a digital ledger, called a
-                    blockchain, that certifies a digital asset to be unique and
-                    therefore not interchangeable
-                  </p>
+                  <p className="post-title">Together in building the future of Web3</p>
                   <a className="btn btn-primary btn-large" href="#">
                     Explore
                   </a>
-                  <div className="wallet-image-wrapper">
-                    <a href="#" className="avatar" data-tooltip="BITLY">
-                      <Image
-                        width="60px"
-                        height="60px"
-                        src="/assets/images/icons/wallet/4.png"
-                        alt="wallet_image"
-                      />
-                    </a>
-                    <a href="#" className="avatar" data-tooltip="D-Coin">
-                      <Image
-                        width="60px"
-                        height="60px"
-                        src="/assets/images/icons/wallet/7.png"
-                        alt="wallet_image"
-                      />
-                    </a>
-                    <a href="#" className="avatar" data-tooltip="Trans Card">
-                      <Image
-                        width="60px"
-                        height="60px"
-                        src="/assets/images/icons/wallet/8.png"
-                        alt="wallet_image"
-                      />
-                    </a>
-                    <a href="#" className="avatar" data-tooltip="Meta Mask">
-                      <Image
-                        width="60px"
-                        height="60px"
-                        src="/assets/images/icons/wallet/1.png"
-                        alt="wallet_image"
-                      />
-                    </a>
-                    <a href="#" className="avatar" data-tooltip="E-Currency">
-                      <Image
-                        width="60px"
-                        height="60px"
-                        src="/assets/images/icons/wallet/3.png"
-                        alt="wallet_image"
-                      />
-                    </a>
-                    <a href="#" className="avatar" data-tooltip="BitCoin">
-                      <Image
-                        width="60px"
-                        height="60px"
-                        src="/assets/images/icons/wallet/2.png"
-                        alt="wallet_image"
-                      />
-                    </a>
-                    <a href="#" className="avatar" data-tooltip="Attar Process">
-                      <Image
-                        width="60px"
-                        height="60px"
-                        src="/assets/images/icons/wallet/6.png"
-                        alt="wallet_image"
-                      />
-                    </a>
-                    <a href="#" className="avatar" data-tooltip="Mark JOrdan">
-                      <Image
-                        width="60px"
-                        height="60px"
-                        src="/assets/images/icons/wallet/5.png"
-                        alt="wallet_image"
-                      />
-                    </a>
-                  </div>
+
                 </div>
               </div>
             </div>
@@ -115,19 +47,19 @@ const Home = () => {
                 data-sal-duration="800"
                 data-sal-delay="150"
               >
-                Direct Teams. <br />
-                For Your Dadicated Dreams
+                We dream of a new tomorrow <br />
+                geared towards mass adoption and decentralization
               </h2>
             </div>
           </div>
         </div>
-        <div className="container-fluid about-fluidimg ">
+        {/* <div className="container-fluid about-fluidimg ">
           <div className="row">
             <div className="img-wrapper">
-              <div className="bg_image--22 bg_image"></div>
+              <div className="bg_image--hero bg_image"></div>
             </div>
           </div>
-        </div>
+        </div> */}
         <div className="container">
           <div className="row g-5">
             <div className="col-lg-6">
@@ -140,7 +72,7 @@ const Home = () => {
                       data-sal-duration="800"
                       data-sal-delay="150"
                     >
-                      Why We Do This
+                      Work with us
                     </h2>
                     <p
                       className="about-disc"
@@ -148,12 +80,10 @@ const Home = () => {
                       data-sal-duration="800"
                       data-sal-delay="150"
                     >
-                      NFTs are virtual tokens that represent ownership of
-                      something inherently distinct and scarce, whether it be a
-                      physical or digital item, such as artwork, a soundtrack, a
-                      collectible, an in-game item or real estate. Unlike
-                      regular cryptocurrencies like bitcoin or fiat money like
-                      the U.S.
+                      Let Virion Labs' core team handle your headache! From
+                      ideation to implementation, we got you covered! With over
+                      4 years of experience and numerous case studies, there is
+                      no problem we wont be able to create a solution for.
                     </p>
                     <a
                       href="blog.html"
@@ -177,8 +107,7 @@ const Home = () => {
                     data-sal-duration="800"
                     data-sal-delay="150"
                   >
-                    Helping You <br />
-                    Grow In Every Stage.
+                    Tap into our resources! <br />
                   </h3>
                   <p
                     className="about-disc mb--0"
@@ -186,11 +115,10 @@ const Home = () => {
                     data-sal-duration="800"
                     data-sal-delay="150"
                   >
-                    NFTs are virtual tokens that represent ownership of
-                    something inherently distinct and scarce, whether it be a
-                    physical or digital item, such as artwork, a soundtrack, a
-                    collectible, an in-game item or real estate. Unlike regular
-                    cryptocurrencies like bitcoin or fiat money like the U.S.
+                    With Virion Connect, you will be able to hand pick highly
+                    qualified talents and specially curate a team that will take
+                    your project to the next level! Get access to our database
+                    of over 15,000 skilled web 3 talents now!
                   </p>
                 </div>
               </div>
@@ -248,7 +176,8 @@ const Home = () => {
                 data-sal="slide-up"
                 data-sal-duration="800"
               >
-                Create and sell your NFTs
+                Our Flagship Offerings
+                <br /> That Will Make Your Visions a Reality
               </h3>
             </div>
           </div>
@@ -264,19 +193,22 @@ const Home = () => {
                 <div className="inner">
                   <div className="icon ">
                     <Image
-                      width="100px" height="100px"
+                      width="100px"
+                      height="100px"
                       src="/assets/images/icons/shape-7.png"
                       alt="Shape"
                     />
                   </div>
-                  <div className="subtitle">Step-01</div>
+                  <div className="subtitle">Work with us</div>
                   <div className="content">
                     <h4 className="title">
-                      <a href="#">Set up your wallet</a>
+                      <a href="#">Virion Solutions</a>
                     </h4>
                     <p className="description">
-                      Powerful features and inclusions, which makes Nuron
-                      standout, easily customizable and scalable.
+                      Let Virion Labs' core team handle your headache! From
+                      ideation to implementation, we got you covered! With over
+                      4 years of experience and numerous case studies, there is
+                      no problem we wont be able to create a solution for.
                     </p>
                     <a className="read-more-button" href="#">
                       <i className="feather-arrow-right"></i>
@@ -298,19 +230,22 @@ const Home = () => {
                 <div className="inner">
                   <div className="icon ">
                     <Image
-                      width="100px" height="100px"
+                      width="100px"
+                      height="100px"
                       src="/assets/images/icons/shape-1.png"
                       alt="Shape"
                     />
                   </div>
-                  <div className="subtitle">Step-02</div>
+                  <div className="subtitle">Tap into our resources!</div>
                   <div className="content">
                     <h4 className="title">
-                      <a href="#">Create your collection</a>
+                      <a href="#">Virion Connect</a>
                     </h4>
                     <p className="description">
-                      A great collection of beautiful website templates for your
-                      need. Choose the best suitable template.
+                      With Virion Connect, you will be able to hand pick highly
+                      qualified talents and specially curate a team that will
+                      take your project to the next level! Get access to our
+                      database of over 15,000 skilled web 3 talents now!
                     </p>
                     <a className="read-more-button" href="#">
                       <i className="feather-arrow-right"></i>
@@ -332,53 +267,21 @@ const Home = () => {
                 <div className="inner">
                   <div className="icon ">
                     <Image
-                      width="100px" height="100px"
+                      width="100px"
+                      height="100px"
                       src="/assets/images/icons/shape-5.png"
                       alt="Shape"
                     />
                   </div>
-                  <div className="subtitle">Step-03</div>
+                  <div className="subtitle">Need a quick broadcast?</div>
                   <div className="content">
                     <h4 className="title">
-                      <a href="#">Add your NFT&apos;s</a>
+                      <a href="#">Virion Node System</a>
                     </h4>
                     <p className="description">
-                      We&apos;ve made the template fully responsive, so it looks
-                      great on all devices: desktop, tablets and.
-                    </p>
-                    <a className="read-more-button" href="#">
-                      <i className="feather-arrow-right"></i>
-                    </a>
-                  </div>
-                </div>
-                <a className="over-link" href="#"></a>
-              </div>
-            </div>
-            {/* <!-- End single service --> */}
-            {/* <!-- start single service --> */}
-            <div className="col-xxl-3 col-lg-4 col-md-6 col-sm-6 col-12">
-              <div
-                data-sal="slide-up"
-                data-sal-delay="300"
-                data-sal-duration="800"
-                className="rn-service-one color-shape-6"
-              >
-                <div className="inner">
-                  <div className="icon ">
-                    <Image
-                      width="100px" height="100px"
-                      src="/assets/images/icons/shape-6.png"
-                      alt="Shape"
-                    />
-                  </div>
-                  <div className="subtitle">Step-04</div>
-                  <div className="content">
-                    <h4 className="title">
-                      <a href="#">Sell Your NFT&apos;s</a>
-                    </h4>
-                    <p className="description">
-                      I throw myself down among the tall grass by the stream as
-                      I lie close to the earth NFT&apos;s.
+                      Virion node system is a powerful broadcasting tool that
+                      allows project founders like you to gain instant exposure
+                      to thousands of users across the globe.
                     </p>
                     <a className="read-more-button" href="#">
                       <i className="feather-arrow-right"></i>
