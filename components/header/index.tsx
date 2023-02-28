@@ -32,6 +32,17 @@ export default function Header() {
     },
   ]);
 
+  const navMarkup = navList.map((li, index) => {
+    return (
+      <li key={index}>
+        <a href={`${li.link}`}>
+          <i className={`${li.icon} mr--5`}></i>
+          {li.title}
+        </a>
+      </li>
+    );
+  });
+
   return (
     <>
       <header className="rn-header haeder-default header--sticky">
@@ -46,23 +57,15 @@ export default function Header() {
                   />
                 </a>
                 <a className="logo-dark" href="index.html">
-                  <img src="assets/images/logo/logo.png" alt="nft-logo" />
+                  <img
+                    src="assets/images/logo/logo-horizontal.png"
+                    alt="nft-logo"
+                  />
                 </a>
               </div>
               <div className="mainmenu-wrapper">
                 <nav id="sideNav" className="mainmenu-nav d-none d-xl-block">
-                  <ul className="mainmenu">
-                    {navList.map((li, index) => {
-                      return (
-                        <li key={index}>
-                          <a href={`${li.link}`}>
-                            <i className={`${li.icon} mr--5`}></i>
-                            {li.title}
-                          </a>
-                        </li>
-                      );
-                    })}
-                  </ul>
+                  <ul className="mainmenu">{navMarkup}</ul>
                 </nav>
               </div>
             </div>
@@ -220,11 +223,7 @@ export default function Header() {
               <div id="my_switcher" className="my_switcher setting-option">
                 <ul>
                   <li>
-                    <a
-                      href="javascript: void(0);"
-                      data-theme="light"
-                      className="setColor light"
-                    >
+                    <a data-theme="light" className="setColor light">
                       <img
                         className="sun-image"
                         src="assets/images/icons/sun-01.svg"
@@ -233,11 +232,7 @@ export default function Header() {
                     </a>
                   </li>
                   <li>
-                    <a
-                      href="javascript: void(0);"
-                      data-theme="dark"
-                      className="setColor dark"
-                    >
+                    <a data-theme="dark" className="setColor dark">
                       <img
                         className="Victor Image"
                         src="assets/images/icons/vector.svg"

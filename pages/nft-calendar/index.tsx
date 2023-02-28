@@ -4,6 +4,8 @@ import { useEffect, useState } from "react";
 import { NftProject as NftProjectType } from "../../types/nftProject";
 import { GetServerSideProps } from "next";
 import useTransformNftProjectType from "../../hooks/useTransformNftProject";
+import { Table } from "../../components/table";
+import { Carousel } from "../../components/carousel";
 
 
 
@@ -35,9 +37,7 @@ export default function NftCalendar(props) {
     setData(props.data.data)
   }, [props]);
 
-  const featuredListMarkup = data.map(item =>{
-    return <li>{item.attributes?.name}</li>
-  });
+  const featuredListMarkup = <Carousel data={data}/>;
 
 
   return (
@@ -49,6 +49,7 @@ export default function NftCalendar(props) {
         <div className="filters-top"></div>
         <div className="filters-side"></div>
         <div className="list"></div>
+        <Table rows={data} headers={["name", "website","supply"]} />
       </DefaultTemplate>
     </>
   );
