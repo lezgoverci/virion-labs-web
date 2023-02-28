@@ -13,8 +13,8 @@ export default function Header() {
       icon: "feather-home",
     },
     {
-      title: "Careers",
-      link: "/careers",
+      title: "NFT Calendar",
+      link: "/nft-calendar",
       active: false,
       icon: "feather-briefcase",
     },
