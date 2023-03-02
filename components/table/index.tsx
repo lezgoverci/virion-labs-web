@@ -2,7 +2,7 @@ import Image from "next/image";
 import { NftProject } from "../../types/nftProject";
 
 export function Table({ rows, headers }:{rows: NftProject[], headers: string[]}) {
-    console.log("rows",rows)
+
   return (
     <div className="box-table table-responsive">
       <table className="table upcoming-projects">
@@ -21,9 +21,9 @@ export function Table({ rows, headers }:{rows: NftProject[], headers: string[]})
           {rows.map((row, index) => {
             return (
               <tr className="color-light" key={index}>
-                <td><span>{row.attributes.name}</span></td>
-                <td><span>{row.attributes.website}</span></td>
-                <td><span>{row.attributes.supply}</span></td>
+                <td><span>{row?.attributes.name}</span></td>
+                <td><span>{row?.attributes.website}</span></td>
+                <td><span>{row?.attributes.supply}</span></td>
               </tr>
             );
           })}

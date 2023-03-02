@@ -20,7 +20,7 @@
             imJs.stickyAdjust();
             imJs.slickActivation();
             imJs.contactForm();
-            imJs.selectJs();
+            //imJs.selectJs();
             imJs.popupMobileMenu();
             imJs.masonryActivation();
             imJs.cursorAnimate();
@@ -174,6 +174,7 @@
             });
 
             $('.slick-activation-03').slick({
+
                 infinite: true,
                 slidesToShow: 5,
                 slidesToScroll: 2,

@@ -1,17 +1,19 @@
 import Image from "next/image";
+import { useEffect } from "react";
 import { NftProject } from "../../types/nftProject";
-export function Card({ data }: { data: NftProject }) {
+export function Card({ item }: { item: NftProject }) {
+
   return (
     <div className="single-slide-product">
       <div className="product-style-one no-overlay">
         <div className="card-thumbnail">
           <a href="product-details.html">
-            <Image
+            {/* <Image
               width="225px"
               height="225px"
               src="assets/images/portfolio/portfolio-01.jpg"
               alt="NFT_portfolio"
-            />
+            /> */}
           </a>
         </div>
         <div className="product-share-wrapper">
@@ -88,7 +90,7 @@ export function Card({ data }: { data: NftProject }) {
           </div>
         </div>
         <a href="product-details.html">
-          <span className="product-name">{data.attributes.name}</span>
+          <span className="product-name">{item?.attributes.name}</span>
         </a>
         <span className="latest-bid">Highest bid 1/20</span>
         <div className="bid-react-area">

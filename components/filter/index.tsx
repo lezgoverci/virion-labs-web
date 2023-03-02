@@ -1,4 +1,31 @@
-export function Filter() {
+import { useEffect, useState } from "react";
+import { NftProject } from "../../types/nftProject";
+import useFilteredList from "../../hooks/useFilteredList";
+
+export function Filter({
+  list,
+  updateList,
+}: {
+  list: NftProject[];
+  updateList:{(newList: NftProject[]): void}
+}) {
+
+  const [filteredList,setFilteredList] = useState(list)
+
+  useEffect(()=>{
+
+  },[list])
+
+  const handleFilter = () =>{
+
+
+    const testList = list.slice(0,3)
+    setFilteredList(testList)
+   updateList(testList)
+  }
+
+
+
   return (
     <>
       <div className="row mb--50 mt--50 align-items-center">
@@ -9,7 +36,7 @@ export function Filter() {
             data-sal="slide-up"
             data-sal-duration="800"
           >
-            Explore Projects
+            Explore Projectssss
           </h3>
         </div>
         <div className="col-lg-6 col-md-6 col-sm-6 col-12 mt_mobile--15">
@@ -26,19 +53,16 @@ export function Filter() {
         </div>
       </div>
 
-      <div className="default-exp-wrapper default-exp-expand " style={{display: "block"}}>
+      <div
+        className="default-exp-wrapper default-exp-expand "
+        style={{ display: "block" }}
+      >
         <div className="inner">
-          <div className="filter-select-option">
-            <label className="filter-leble">LIKES</label>
-            <select>
-              <option data-display="Most liked">Most liked</option>
-              <option value="1">Least liked</option>
-            </select>
-          </div>
+
 
           <div className="filter-select-option">
             <label className="filter-leble">Category</label>
-            <select>
+            <select onChange={()=>{handleFilter()}}>
               <option data-display="Category">Category</option>
               <option value="1">Art</option>
               <option value="1">Photograph</option>
@@ -48,26 +72,7 @@ export function Filter() {
             </select>
           </div>
 
-          <div className="filter-select-option">
-            <label className="filter-leble">Collections</label>
-            <select>
-              <option data-display="Collections">Collections</option>
-              <option value="1">BoredApeYachtClub</option>
-              <option value="2">MutantApeYachtClub</option>
-              <option value="4">Art Blocks Factory</option>
-            </select>
-          </div>
 
-          <div className="filter-select-option">
-            <label className="filter-leble">Sale type</label>
-            <select>
-              <option data-display="Sale type">Sale type</option>
-              <option value="1">Fixed price</option>
-              <option value="2">Timed auction</option>
-              <option value="4">Not for sale</option>
-              <option value="4">Open for offers</option>
-            </select>
-          </div>
 
           <div className="filter-select-option">
             <label className="filter-leble">Price Range</label>
