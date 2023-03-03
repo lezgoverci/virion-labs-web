@@ -8,12 +8,12 @@ export function Card({ item }: { item: NftProject }) {
       <div className="product-style-one no-overlay">
         <div className="card-thumbnail">
           <a href="product-details.html">
-            {/* <Image
+            <Image
               width="225px"
               height="225px"
               src="assets/images/portfolio/portfolio-01.jpg"
               alt="NFT_portfolio"
-            /> */}
+            />
           </a>
         </div>
         <div className="product-share-wrapper">

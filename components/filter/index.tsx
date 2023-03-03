@@ -7,24 +7,17 @@ export function Filter({
   updateList,
 }: {
   list: NftProject[];
-  updateList:{(newList: NftProject[]): void}
+  updateList: { (newList: NftProject[]): void };
 }) {
+  const [filteredList, setFilteredList] = useState(list);
 
-  const [filteredList,setFilteredList] = useState(list)
+  useEffect(() => {}, [list]);
 
-  useEffect(()=>{
-
-  },[list])
-
-  const handleFilter = () =>{
-
-
-    const testList = list.slice(0,3)
-    setFilteredList(testList)
-   updateList(testList)
-  }
-
-
+  const handleFilter = () => {
+    const testList = list.slice(0, 3);
+    setFilteredList(testList);
+    updateList(testList);
+  };
 
   return (
     <>
@@ -36,7 +29,7 @@ export function Filter({
             data-sal="slide-up"
             data-sal-duration="800"
           >
-            Explore Projectssss
+            Explore Projects
           </h3>
         </div>
         <div className="col-lg-6 col-md-6 col-sm-6 col-12 mt_mobile--15">
@@ -58,21 +51,42 @@ export function Filter({
         style={{ display: "block" }}
       >
         <div className="inner">
-
-
-          <div className="filter-select-option">
-            <label className="filter-leble">Category</label>
-            <select onChange={()=>{handleFilter()}}>
-              <option data-display="Category">Category</option>
-              <option value="1">Art</option>
-              <option value="1">Photograph</option>
-              <option value="2">Metaverses</option>
-              <option value="4">Potato</option>
-              <option value="4">Photos</option>
-            </select>
+          <div className="setting-option d-none d-lg-block filter-select-option">
+          <label className="filter-label">Search</label>
+            <form className="search-form-wrapper" action="#">
+              <input
+                type="search"
+                placeholder="Search Here"
+                aria-label="Search"
+              />
+              <div className="search-icon">
+                <button>
+                  <i className="feather-search"></i>
+                </button>
+              </div>
+            </form>
           </div>
 
-
+          <div className="filter-select-option">
+            <label className="filter-leble">Date of Drop</label>
+            <select
+              onChange={() => {
+                handleFilter();
+              }}
+            >
+              <option value="1">this week</option>
+              <option value="2">next week</option>
+              <option value="3">this month</option>
+              <option value="4">in 3 months</option>
+              <option value="5">in 6 months</option>
+              <option value="6">in 12 months</option>
+              <option value="7">last week</option>
+              <option value="7">last month</option>
+              <option value="7">last 3 months</option>
+              <option value="7">last 6 months</option>
+              <option value="7">last 12 months</option>
+            </select>
+          </div>
 
           <div className="filter-select-option">
             <label className="filter-leble">Price Range</label>

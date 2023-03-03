@@ -1,6 +1,9 @@
 export const INITIAL_NFT_PROJECT_VALUES = {
   attributes: {
-    blockchain: "",
+    blockchain: {
+      name: "",
+      currency: ""
+    },
     description: "",
     discord: "",
     facebook: "",
@@ -10,5 +13,7 @@ export const INITIAL_NFT_PROJECT_VALUES = {
     supply: "",
     twitter: "",
     website: "",
+    drop_date: "",
+    price: ""
   },
 };

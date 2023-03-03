@@ -1,7 +1,7 @@
 import DefaultTemplate from "../../templates/default";
 import { SetStateAction, useEffect, useState } from "react";
 import { NftProject as NftProjectType } from "../../types/nftProject";
-import { GetServerSideProps } from "next";
+import { GetServerSideProps, InferGetServerSidePropsType } from "next";
 import useTransformNftProjectType from "../../hooks/useTransformNftProject";
 import { Table } from "../../components/table";
 import { Carousel } from "../../components/carousel";
@@ -9,9 +9,7 @@ import { Filter } from "../../components/filter";
 import { SideFilters } from "../../components/side-filters";
 
 type Props = {
-  projects: {
-    data: NftProjectType[];
-  };
+  projects: NftProjectType[];
 };
 
 type FilterCondition = {
@@ -20,33 +18,64 @@ type FilterCondition = {
   value: number;
 };
 
-export default function NftCalendar({ projects }: Props) {
+type ServerSidePropsType = InferGetServerSidePropsType<
+  typeof getServerSideProps
+>;
+
+export default function NftCalendar({ projects }: ServerSidePropsType) {
   const INITIAL_DATA: NftProjectType[] = [];
 
   const [data, setData] = useState(INITIAL_DATA);
   const [filters, setFilters] = useState<FilterCondition[]>([]);
-  const [filteredData, setFilteredData] = useState([]);
+  const [filteredData, setFilteredData] = useState<NftProjectType[]>([]);
+
+  const transformProps = ({
+    data,
+  }: {
+    data: ServerSidePropsType;
+  }): NftProjectType[] => {
+    const transformedProps: NftProjectType[] = data.projects?.data.map(
+      (project) => {
+        const transformedProject: NftProjectType = {
+          attributes: {
+            ...project.attributes,
+            blockchain: {
+              currency: project.attributes.blockchain.data?.attributes.currency,
+              name: project.attributes.blockchain.data?.attributes.name,
+            },
+            project_founders: project.attributes.project_founders,
+          },
+        };
+
+        return transformedProject;
+      }
+    );
+
+    return transformedProps;
+  };
+
+  // useEffect(()=>{
+  //   console.log("server side props type", typeof ServerSidePropsType)
+  // },[])
 
   useEffect(() => {
-    if (projects.data?.length > 0) {
-      setData(projects.data);
-      setFilteredData(projects.data)
+    if (projects?.data.length > 0) {
+      const transformedData = transformProps({ data: { projects: projects } });
+      setData(transformedData);
+      setFilteredData(transformedData);
     }
   }, [projects]);
 
-
-  const updateList = (newList: NftProjectType[]) : void =>{
-    setFilteredData(newList)
-  }
-
-
+  const updateList = (newList: NftProjectType[]): void => {
+    setFilteredData(newList);
+  };
 
   return (
     <>
       <DefaultTemplate>
         <div className="featured">
           <div className="featured-list">
-          <Carousel data={data} />
+            <Carousel data={data} />
           </div>
         </div>
         {/* <div className="filters-top"></div>
@@ -55,14 +84,25 @@ export default function NftCalendar({ projects }: Props) {
 
         <div className="container">
           <div className="row">
-            <Filter list={filteredData} updateList={updateList}/>
+            <Filter list={filteredData} updateList={updateList} />
           </div>
           <div className="row">
             <div className="col-lg-3 order-2 order-lg-1">
               <SideFilters />
             </div>
             <div className="col-lg-9 order-1 order-lg-2">
-              <Table rows={filteredData} headers={["name", "website", "supply"]} />
+              <Table
+                rows={filteredData}
+                headers={[
+                  "image",
+                  "name",
+                  "website",
+                  "blockchain",
+                  "minting price",
+                  "supply",
+                  "drop",
+                ]}
+              />
             </div>
           </div>
         </div>
@@ -71,13 +111,10 @@ export default function NftCalendar({ projects }: Props) {
   );
 }
 
-export const getServerSideProps: GetServerSideProps<Props> = async () => {
+export const getServerSideProps = async () => {
   const url = `${process.env.NEXT_PUBLIC_APP_URI}/api/nft-projects`;
-
 
   const response = await fetch(url);
   const projects = await response.json();
-
-
   return { props: { projects } };
 };
