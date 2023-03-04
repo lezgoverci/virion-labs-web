@@ -110,7 +110,7 @@ export default function NftCalendar({ projects }: ServerSidePropsType) {
 
         <div className="container">
           <div className="row">
-            <Filter list={filteredData} updateList={updateList} />
+            <Filter list={data} updateList={updateList} />
           </div>
           <div className="row">
             <div className="col-lg-3 order-2 order-lg-1">
