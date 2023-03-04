@@ -14,7 +14,7 @@ export function Filter({
   useEffect(() => {}, [list]);
 
   const handleFilter = () => {
-    const testList = list.slice(0, 3);
+    const testList = list.slice(0, Math.floor(Math.random() * list.length));
     setFilteredList(testList);
     updateList(testList);
   };
