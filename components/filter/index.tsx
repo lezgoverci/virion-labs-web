@@ -1,4 +1,24 @@
-export function Filter() {
+import { useEffect, useState } from "react";
+import { NftProject } from "../../types/nftProject";
+import useFilteredList from "../../hooks/useFilteredList";
+
+export function Filter({
+  list,
+  updateList,
+}: {
+  list: NftProject[];
+  updateList: { (newList: NftProject[]): void };
+}) {
+  const [filteredList, setFilteredList] = useState(list);
+
+  useEffect(() => {}, [list]);
+
+  const handleFilter = () => {
+    const testList = list.slice(0, 3);
+    setFilteredList(testList);
+    updateList(testList);
+  };
+
   return (
     <>
       <div className="row mb--50 mt--50 align-items-center">
@@ -26,46 +46,45 @@ export function Filter() {
         </div>
       </div>
 
-      <div className="default-exp-wrapper default-exp-expand " style={{display: "block"}}>
+      <div
+        className="default-exp-wrapper default-exp-expand "
+        style={{ display: "block" }}
+      >
         <div className="inner">
-          <div className="filter-select-option">
-            <label className="filter-leble">LIKES</label>
-            <select>
-              <option data-display="Most liked">Most liked</option>
-              <option value="1">Least liked</option>
-            </select>
+          <div className="setting-option d-none d-lg-block filter-select-option">
+          <label className="filter-label">Search</label>
+            <form className="search-form-wrapper" action="#">
+              <input
+                type="search"
+                placeholder="Search Here"
+                aria-label="Search"
+              />
+              <div className="search-icon">
+                <button>
+                  <i className="feather-search"></i>
+                </button>
+              </div>
+            </form>
           </div>
 
           <div className="filter-select-option">
-            <label className="filter-leble">Category</label>
-            <select>
-              <option data-display="Category">Category</option>
-              <option value="1">Art</option>
-              <option value="1">Photograph</option>
-              <option value="2">Metaverses</option>
-              <option value="4">Potato</option>
-              <option value="4">Photos</option>
-            </select>
-          </div>
-
-          <div className="filter-select-option">
-            <label className="filter-leble">Collections</label>
-            <select>
-              <option data-display="Collections">Collections</option>
-              <option value="1">BoredApeYachtClub</option>
-              <option value="2">MutantApeYachtClub</option>
-              <option value="4">Art Blocks Factory</option>
-            </select>
-          </div>
-
-          <div className="filter-select-option">
-            <label className="filter-leble">Sale type</label>
-            <select>
-              <option data-display="Sale type">Sale type</option>
-              <option value="1">Fixed price</option>
-              <option value="2">Timed auction</option>
-              <option value="4">Not for sale</option>
-              <option value="4">Open for offers</option>
+            <label className="filter-leble">Date of Drop</label>
+            <select
+              onChange={() => {
+                handleFilter();
+              }}
+            >
+              <option value="1">this week</option>
+              <option value="2">next week</option>
+              <option value="3">this month</option>
+              <option value="4">in 3 months</option>
+              <option value="5">in 6 months</option>
+              <option value="6">in 12 months</option>
+              <option value="7">last week</option>
+              <option value="7">last month</option>
+              <option value="7">last 3 months</option>
+              <option value="7">last 6 months</option>
+              <option value="7">last 12 months</option>
             </select>
           </div>
 

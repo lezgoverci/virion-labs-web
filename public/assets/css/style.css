@@ -6364,7 +6364,7 @@ input[type=search] {
   appearance: textfield;
   appearance: textfield;
   padding-right: 2px;
-  width: 270px;
+  /* width: 270px; */
 }
 
 input[type=search]::-webkit-search-decoration {
@@ -18296,7 +18296,7 @@ button .small-image {
 .default-exp-wrapper .inner {
   display: flex;
   padding: 40px 0;
-  justify-content: flex-end;
+  justify-content: flex-start;
   margin: -10px;
   flex-wrap: wrap;
 }
@@ -18316,7 +18316,7 @@ button .small-image {
   }
 }
 .default-exp-wrapper .inner .filter-select-option {
-  flex-basis: 20%;
+  flex-basis: 33%;
   padding: 10px;
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {

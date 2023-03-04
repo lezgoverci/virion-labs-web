@@ -59,7 +59,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <Script strategy="beforeInteractive" src="/assets/js/vendor/savePopup.js" />
       <Script strategy="beforeInteractive" src="/assets/js/vendor/vanilla.tilt.js" />
 
-      <Script strategy="afterInteractive" src="/assets/js/main.js" />
+      <Script strategy="lazyOnload" src="/assets/js/main.js" />
       {/* <!-- Meta Mask  --> */}
 
       <Script  src="/assets/js/vendor/web3.min.js" />

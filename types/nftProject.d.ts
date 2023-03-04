@@ -5,10 +5,15 @@ export interface NftProject {
     website: string;
     twitter: string;
     instagram: string;
-    blockchain: string;
     supply: string;
     discord: string;
     facebook: string;
-    project_founders: string;
+    project_founders?: string;
+    price: string;
+    blockchain: {
+      name: string;
+      currency: string;
+    };
+    drop_date: string;
   };
 }
