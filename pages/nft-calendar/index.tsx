@@ -35,7 +35,31 @@ export default function NftCalendar({ projects }: ServerSidePropsType) {
     data: ServerSidePropsType;
   }): NftProjectType[] => {
     const transformedProps: NftProjectType[] = data.projects?.data.map(
-      (project) => {
+      (project: {
+        attributes: {
+          blockchain: {
+            data:{
+              attributes:{
+                name: string;
+                currency: string;
+              }
+
+            }
+          };
+          project_founders: any;
+          name: string;
+          description: string;
+          website: string;
+          twitter: string;
+          instagram: string;
+          supply: string;
+          discord: string;
+          facebook: string;
+          price: string;
+          drop_date: string;
+        };
+      }) => {
+        console.log("project.attributes", project.attributes);
         const transformedProject: NftProjectType = {
           attributes: {
             ...project.attributes,
@@ -46,6 +70,8 @@ export default function NftCalendar({ projects }: ServerSidePropsType) {
             project_founders: project.attributes.project_founders,
           },
         };
+
+        console.log("transformedProject", transformedProject);
 
         return transformedProject;
       }
